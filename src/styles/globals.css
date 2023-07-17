@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+    margin: 0;
+    width: 100%;
+    font-family: Segoe UI,Tahoma,sans-serif;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
