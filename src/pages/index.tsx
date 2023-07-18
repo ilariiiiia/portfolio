@@ -53,7 +53,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-gradient-to-tr from-[#323d52] to-[#0f124a] text-white max-w-full">
-        <section className="py-7 mx-5 flex flex-col justify-center items-center text-center">
+        <section className="py-7 mx-5 flex flex-col justify-center items-center text-center text-blue-100">
           <h1 className="font-bold text-6xl">
             Ciao! <span className="animate-wave duration-1000 ease-in-out inline-block">👋</span>
           </h1>
@@ -71,7 +71,7 @@ export default function Home() {
         </section>
         <section className="m-7 flex flex-col justify-center items-center max-w-full">
           <h1 className="text-4xl m-7">
-            Technologies I&apos;ve worked with: <button className="text-sm bg-transparent border-0 text-white" onClick={_ => {setHideTechnologies(!hideTechnologies)}}>{hideTechnologies ? "show" : "hide"}</button>
+            Technologies I&apos;ve worked with: <button className="text-sm bg-white/20 rounded-md border-0 text-blue-300" onClick={_ => {setHideTechnologies(!hideTechnologies)}}>{hideTechnologies ? "show" : "hide"}</button>
           </h1>
           <article style={{ display: hideTechnologies ? "none" : "block" }}>
             {
@@ -101,7 +101,7 @@ export default function Home() {
         </section>
         <section className="m-7 flex flex-col justify-center items-center max-w-full">
           <h1 className="text-4xl m-7">
-            Projects <button className="text-sm bg-transparent border-0 text-white" onClick={_ => {setHideProjects(!hideProjects)}}>{hideProjects ? "show" : "hide"}</button>
+            Projects <button className="text-sm border-0 text-blue-300 bg-white/20 rounded-md" onClick={_ => {setHideProjects(!hideProjects)}}>{hideProjects ? "show" : "hide"}</button>
           </h1>
           {
             !hideProjects && projects.map((p, i) => <ProjectComponent key={i} project={p}/>)
@@ -114,18 +114,18 @@ export default function Home() {
           <form onSubmit={(e) => handleFormSubmit(e)} className="container max-w-2xl">
             <div className="mb-6">
               <label htmlFor="name" className="block mb-2 text-sm font-medium text-white">Name</label>
-              <input type="name" id="name" value={formData.name} onChange={(e) => setFormData(prev => {return {...prev, name: e.target.value}})} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John Doe" required/>
+              <input type="name" id="name" value={formData.name} onChange={(e) => setFormData(prev => {return {...prev, name: e.target.value}})} className="bg-transparent bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] text-md rounded-lg border-0 p-2.5 w-full placeholder-white/40 text-white focus-visible:outline-none focus:border-l-2 focus-visible:border-white" placeholder="John Doe" required/>
             </div>
             <div className="mb-6">
               <label htmlFor="email" className="block mb-2 text-sm font-medium  text-white">Your email</label>
-              <input type="email" id="email" value={formData.email} onChange={(e) => setFormData(prev => {return {...prev, email: e.target.value}})} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="johndoe@example.com" required/>
+              <input type="email" id="email" value={formData.email} onChange={(e) => setFormData(prev => {return {...prev, email: e.target.value}})} className="bg-transparent bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] text-md rounded-lg border-0 p-2.5 w-full placeholder-white/40 text-white focus-visible:outline-none focus:border-l-2 focus-visible:border-white" placeholder="johndoe@example.com" required/>
             </div>
             <div className="mb-6">
               <label htmlFor="description" className="block mb-2 text-sm font-medium  text-white">Please describe your request</label>
-              <textarea id="description" value={formData.message} onChange={(e) => setFormData(prev => {return {...prev, message: e.target.value}})} className="text-sm rounded-lg w-full p-2.5 h-40"/>
+              <textarea id="description" value={formData.message} onChange={(e) => setFormData(prev => {return {...prev, message: e.target.value}})} className="bg-transparent bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] text-md rounded-lg border-0 p-2.5 placeholder-white/40 text-white focus-visible:outline-none focus:border-l-2 focus-visible:border-white min-h-40 h-40 w-full min-w-full max-w-full"/>
             </div>
             <div className="w-full text-right">
-              <button type="submit" className="text-lg rounded-xl bg-black/40 border-0 p-3 text-white mx-auto cursor-pointer">Submit</button>
+              <button type="submit" className="text-base rounded-xl bg-black/40 border-0 p-3 text-white mx-auto cursor-pointer">Submit</button>
             </div>
           </form>
         </section>
