@@ -37,7 +37,7 @@ export default function Home() {
       <main className="bg-gradient-to-l from-[#3b414c] to-[#0f124a] text-white max-w-full">
         <section className="py-7 flex flex-col justify-center items-center">
           <h1 className="font-bold text-6xl">
-            Ciao! 👋
+            Ciao! <span className="animate-wave duration-1000 ease-in-out inline-block">👋</span>
           </h1>
           <h3 className="font-bold text-xl p-2">
             I&apos;m Ilaria Migone, a web and Python developer.

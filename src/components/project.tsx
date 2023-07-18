@@ -3,19 +3,9 @@ import Link from "next/link"
 
 export default function Project({ project, n }: { project: Project, n: number }) {
 
-    console.log(n);
-    const gradientPositions = [
-        "br",
-        "bl",
-        "tl",
-        "tr"
-    ]
-
-    const randGradient = gradientPositions[n % 4];
-
     return (
         <>
-            <div className={`p-5 m-7 bg-gradient-to-${randGradient} to-[#ffffff] from-[#c8c8d7] rounded-xl text-black no-underline container max-w-2xl`}>
+            <div className={`p-5 m-7 bg-gradient-to-tl to-[#ffffff] from-[#c8c8d7] rounded-xl text-black no-underline container max-w-2xl`}>
                 <h5 className="text-2xl m-2">
                     {
                         project.name
