@@ -41,7 +41,7 @@ export default function Home() {
 
   const languages = ['Python', 'Javascript', 'PHP'];
   const databases = ['MySQL', 'PostgreSQL', 'SQLite'];
-  const frontend_frameworks = ['NextJS', 'React'];
+  const frontend_frameworks = ['NextJS', 'React', 'Boostrap'];
   const other_web_development = ['Prisma', 'Express', 'Flask'];
   const cloud = ['RDS', 'S3', 'CloudFront'];
 
@@ -73,7 +73,7 @@ export default function Home() {
           <h1 className="text-4xl m-7">
             Technologies I&apos;ve worked with: <button className="text-sm bg-white/20 rounded-md border-0 text-blue-300" onClick={_ => {setHideTechnologies(!hideTechnologies)}}>{hideTechnologies ? "show" : "hide"}</button>
           </h1>
-          <article style={{ display: hideTechnologies ? "none" : "block" }}>
+          <article className="max-w-full" style={{ display: hideTechnologies ? "none" : "block" }}>
             {
               [
                 [languages, "Programming languages"],
@@ -86,13 +86,15 @@ export default function Home() {
                 <h2 key={'tech_h3_'+i.toString()} className="text-center">
                   {arr[1]}:
                 </h2>
-                <div key={'teach_div_'+i.toString()} className="m-10 flex flex-row flex-wrap justify-center">
-                  {
-                    // useless check, for ts
-                    typeof(arr[0]) != "string" && arr[0]?.map((element: string, i: number) => <div key={"tech_image_"+i.toString()} className="w-48 h-48 relative m-3">
-                    <Image className="p-3 bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] rounded-xl object-contain" src={`/${element}-logo.png`} alt={element + " logo"} height={192} width={192}/>
-                  </div>)
-                  }
+                <div className="max-w-full overflow-x-auto">
+                  <div key={'teach_div_'+i.toString()} className={`my-10 mx-5 flex flex-row _3Proj:justify-center`}>
+                    {
+                      // useless check, for ts
+                      typeof(arr[0]) != "string" && arr[0]?.map((element: string, i: number) => <div key={"tech_image_"+i.toString()} className="w-48 h-48 relative m-3">
+                      <Image className="p-3 bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] rounded-xl object-contain" src={`/${element}-logo.png`} alt={element + " logo"} height={192} width={192}/>
+                    </div>)
+                    }
+                  </div>
                 </div>
                 </div>
               })
@@ -125,7 +127,7 @@ export default function Home() {
               <textarea id="description" value={formData.message} onChange={(e) => setFormData(prev => {return {...prev, message: e.target.value}})} className="bg-transparent bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] text-md rounded-lg border-0 p-2.5 placeholder-white/40 text-white focus-visible:outline-none focus:border-l-2 focus-visible:border-white min-h-40 h-40 w-full min-w-full max-w-full"/>
             </div>
             <div className="w-full text-right">
-              <button type="submit" className="text-base rounded-xl bg-black/40 border-0 p-3 text-white mx-auto cursor-pointer">Submit</button>
+              <button type="submit" className="text-base font-medium rounded-xl bg-transparent bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] border-0 p-3 text-white mx-auto cursor-pointer" style={{ fontFamily: 'Segoe UI'}}>Submit</button>
             </div>
           </form>
         </section>
