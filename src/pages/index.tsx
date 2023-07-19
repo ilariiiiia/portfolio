@@ -39,6 +39,17 @@ export default function Home() {
       .catch(err => console.error("An error occurred: ", err))
   }, [])
 
+  function sendEmail() {
+    if(formData.email && formData.message && formData.name) {
+      fetch('/api/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+      .catch(err => console.error("An error occurred: ", err))
+    }
+  }
+
   const languages = ['Python', 'Javascript', 'PHP'];
   const databases = ['MySQL', 'PostgreSQL', 'SQLite'];
   const frontend_frameworks = ['NextJS', 'React', 'Boostrap'];
@@ -127,7 +138,7 @@ export default function Home() {
               <textarea id="description" value={formData.message} onChange={(e) => setFormData(prev => {return {...prev, message: e.target.value}})} className="bg-transparent bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] text-md rounded-lg border-0 p-2.5 placeholder-white/40 text-white focus-visible:outline-none focus:border-l-2 focus-visible:border-white min-h-40 h-40 w-full min-w-full max-w-full"/>
             </div>
             <div className="w-full text-right">
-              <button type="submit" className="text-base font-medium rounded-xl bg-transparent bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] border-0 p-3 text-white mx-auto cursor-pointer" style={{ fontFamily: 'Segoe UI'}}>Submit</button>
+              <button type="submit" onClick={sendEmail} className="text-base font-medium rounded-xl bg-transparent bg-gradient-to-br to-[#ffffff40] from-[#c8c8d730] border-0 p-3 text-white mx-auto cursor-pointer" style={{ fontFamily: 'Segoe UI'}}>Submit</button>
             </div>
           </form>
         </section>
