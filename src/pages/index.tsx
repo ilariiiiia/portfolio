@@ -68,7 +68,7 @@ export default function Home() {
             Ciao! <span className="animate-wave duration-1000 ease-in-out inline-block">👋</span>
           </h1>
           <h2 className="font-bold text-xl p-2">
-            I&apos;m nicolello, a web and Python developer.
+            I&apos;m Ilaria Migone (a.k.a. nicolello), a web and Python developer.
           </h2>
           <p className="container text-center p-2">
             Besides programming, my other main interest is music: I have been playing the piano for over 13 years.
