@@ -1,4 +1,5 @@
 import { type AppType } from "next/dist/shared/lib/utils";
+import { Analytics } from '@vercel/analytics/react';
 import "@/styles/globals.css";
 import Head from "next/head";
 
@@ -12,7 +13,10 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     <meta name="msapplication-TileColor" content="#00aba9"/>
     <meta name="theme-color" content="#ffffff"/>
   </Head>
-  return <Component {...pageProps} />;
+  return <>
+    <Component {...pageProps} />;
+    <Analytics />
+  </>
 };
 
 export default MyApp;
