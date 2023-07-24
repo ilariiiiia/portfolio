@@ -14,7 +14,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     <meta name="theme-color" content="#ffffff"/>
   </Head>
   return <>
-    <Component {...pageProps} />;
+    <Component {...pageProps} />
     <Analytics />
   </>
 };
