@@ -87,7 +87,7 @@ export default function Home() {
             {
               [
                 [languages, "Programming languages"],
-                [databases, "Database programs"],
+                [databases, "RDBMS"],
                 [frontend_frameworks, "Web development frameworks"],
                 [cloud, "Cloud"],
                 [other_web_development, "Others for web development"]
