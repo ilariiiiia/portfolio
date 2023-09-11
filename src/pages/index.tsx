@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <>
     <Head>
-        <title>Ilaria Migone - portfolio</title>
+        <title>Nicola Migone - portfolio</title>
         <meta name="description" content="Portfolio website for Ilaria Migone" />
       </Head>
       <main className="bg-gradient-to-tr from-[#323d52] to-[#0f124a] text-white max-w-full">
