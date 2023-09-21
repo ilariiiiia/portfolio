@@ -60,7 +60,7 @@ export default function Home() {
     <>
     <Head>
         <title>Nicola Migone - portfolio</title>
-        <meta name="description" content="Portfolio website for Ilaria Migone" />
+        <meta name="description" content="Portfolio website for Nicola Migone" />
       </Head>
       <main className="bg-gradient-to-tr from-[#323d52] to-[#0f124a] text-white max-w-full">
         <section className="py-7 mx-5 flex flex-col justify-center items-center text-center text-blue-100">
