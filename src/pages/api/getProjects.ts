@@ -39,7 +39,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Projec
             name: "Blasketball",
             description: "A blaseball-like online game where you can simulate many basket games at the same time. Made as a freelance service.",
             link: "https://blaseball-copy.vercel.app/",
-            github: "https://github.com/nicolello-dev/Trivia-AI-Magic-Machine",
+            github: "https://github.com/nicolello-dev/Blaseball-copy",
             languages: ["Python", "HTML", "CSS"],
             stack: ["ChatGPT", "Flask"]
         }
